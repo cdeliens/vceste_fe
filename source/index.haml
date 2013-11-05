@@ -1,9 +1,23 @@
 ---
-title:   Welcome to Sauce
+title:   25este.com
 layout:  main
 classes: home
 ---
+.row-fluid
+  .container
+    .span12{"ng-controller" =>"AppCtrl"}
+      .row-fluid
+        .span3
+          .logo
+        .span9.header-content
 
-.sauce
-  %h1 Welcome to Sauce
-  %p  Everything's set up and ready to go!<br />Start dipping your code into Sauce.
+.row-fluid
+  .container
+    .span12{"ng-controller" =>"EventsCtrl"}
+      .row-fluid
+        .span3.feed
+          %span.event{ 'ng-repeat' => "event in events.posts" }
+            %a{ href: '/event', 'data-id' => "{{event.id}}" }
+              %h4{'ng-bind-html-unsafe' => 'event.title_plain' }
+        .span9.main-content
+    

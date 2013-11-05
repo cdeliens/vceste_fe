@@ -3,7 +3,12 @@
 %head
   -# Meta tags
   = partial "layouts/meta"
-
+  = javascript_include_tag "http://code.jquery.com/jquery.min.js"
+  = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"
+  = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular-resource.min.js"
+  = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular-route.min.js"
+  = javascript_include_tag "application"
+  %link{ href: 'http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300,800', rel: 'stylesheet', type: 'text/css'}
   -# Page title
   %title= current_page.data.title
 
@@ -16,12 +21,12 @@
   -# HTML5Shiv
   <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
-%body{ class: current_page.data.classes || "" }
+%body{ class: current_page.data.classes || "", "ng-app" => "VcesteApp"}
   = yield
 
   -# JavaScripts
-  = javascript_include_tag "http://code.jquery.com/jquery.min.js"
-  = javascript_include_tag "application"
+
+
 
 -# Need this to close the doctype partial
 </html>

@@ -3,9 +3,9 @@
 //------------------------------------------------------------------------
 
 //= require_tree ./vendor
-
+@import "bootstrap";
+@import "bootstrap-responsive";
 @import "compass";
-
 @import "shared/colors";
 @import "shared/fonts";
 @import "shared/variables";
