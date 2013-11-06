@@ -4,20 +4,20 @@ layout:  main
 classes: home
 ---
 .row-fluid
-  .container
-    .span12{"ng-controller" =>"AppCtrl"}
-      .row-fluid
-        .span3
-          .logo
-        .span9.header-content
+  .span12{"ng-controller" =>"AppCtrl"}
+    .row-fluid
+      .span3
+        .logo
+      .span9.header-content
 
 .row-fluid
-  .container
-    .span12{"ng-controller" =>"EventsCtrl"}
-      .row-fluid
-        .span3.feed
-          %span.event{ 'ng-repeat' => "event in events.posts" }
-            %a{ href: '/event', 'data-id' => "{{event.id}}" }
-              %h4{'ng-bind-html-unsafe' => 'event.title_plain' }
-        .span9.main-content
+  .span12{"ng-controller" =>"EventsFeedCtrl"}
+    .row-fluid
+      .span3.feed
+        %span.event{ 'ng-repeat' => "event in events.posts" }
+          %a{ href: '/#/event/{{event.id}}' }
+            %h4
+              {{event.title_plain}}
+      .span9.main-content
+        %ng-view
     

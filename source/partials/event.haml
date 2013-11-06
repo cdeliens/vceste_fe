@@ -1,0 +1,11 @@
+%section.event
+  .header
+    %h1
+      {{event['post']['title_plain']}}
+  .image
+    %img{ src:"{{event['post']['attachments'][0]['images']['full']['url']}}"}
+  .content
+    %p
+      {{event['post']['content']}}
+
+  
