@@ -14,6 +14,17 @@ classes: home
   .span12{"ng-controller" =>"EventsFeedCtrl"}
     .row-fluid
       .span3.feed
+        .row-fluid
+          .span1
+            %a{'ng-click' => "getFeedByCategory('evento')"}
+              %i.icon-search
+          .span1
+          .span1
+            %a{'ng-click' => "getFeedByCategory('chart')"}
+              C
+          .span1
+            %a{'ng-click' => "getFeedByCategory('articulo')"}
+              A
         %span.event{ 'ng-repeat' => "event in events.posts" }
           %a{ href: '/#/event/{{event.id}}' }
             %h4

@@ -2,7 +2,7 @@
 // Application
 //------------------------------------------------------------------------
 
-//= require_tree ./vendor
+// = require_tree ./vendor
 @import "bootstrap";
 @import "bootstrap-responsive";
 @import "compass";
@@ -12,5 +12,5 @@
 @import "shared/mixins";
 @import "shared/media";
 @import "shared/ie";
-
+@import "vendor/loading";
 @import "main";
