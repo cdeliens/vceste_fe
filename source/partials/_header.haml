@@ -1,0 +1,45 @@
+.container.banner_header
+  .row-fluid
+    .span12
+      .ad
+        = image_tag "", "data-src" => "holder.js/730x90"
+.row-fluid.header{"data-spy" =>"affix", "data-offset-top" => "130" }
+  .container
+    .span12
+      .span3
+        .logo
+      .span9
+        .span.menu_top
+          %nav
+            %ul
+              %li
+                %h2
+                  Anunciate
+              %li
+                %h2
+                  Contactanos
+              %li
+                %h2
+                  Facebook
+              %li
+                %h2
+                  Instagram
+
+        .span.menu_bottom
+          %nav{"ng-controller" =>"EventsFeedCtrl"}
+            %ul
+              %li
+                %h1
+                  %a{'ng-click' => "getFeedByCategory('evento')"}
+                    Eventos
+              %li
+                %h1
+                  %a{'ng-click' => "getFeedByCategory('articulo')"}
+                    Articulos
+              %li
+                %h1
+                  Galerias
+              %li
+                %h1
+                  %a{'ng-click' => "getFeedByCategory('chart')"}
+                    Charts
